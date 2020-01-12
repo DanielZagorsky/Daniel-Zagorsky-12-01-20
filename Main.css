@@ -1,3 +1,498 @@
-.check{
-font-size:40px;
+/* Style the Header */
+.Header {
+    display: flex;
+    /*background-color: #ddd;*/
+    background-color: var(--color-HeaderBackground);
+    color: var(--color-Headercolor)!important;
+    height: 45px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
 }
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: var(--color-FooterBackground);
+    color: var(--color-Footercolor)!important;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    height: 45px;
+    padding: 8px;
+    z-index: 1000;
+}
+
+
+.body {
+    display: flex;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 100%;
+    background-image: url("BGpic.jpg");
+    background-size: cover;
+    width: 100%;
+    padding: 5px;
+    position: relative;
+}
+
+button.close{
+  cursor: pointer;
+}
+
+.shadow {
+   -moz-box-shadow:    inset 0 0 5px black;
+   -webkit-box-shadow: inset 0 0 5px black;
+   box-shadow:         inset 0 0 5px black;
+}
+
+img.HeaderImg {
+    height: 45px !important;
+    cursor: pointer;
+    float: left;
+}
+
+.NavLinks{
+  color: black;
+}
+
+.navbar{
+  padding:0px!important;
+}
+
+.NavMenu {
+    float: right;
+    min-width: 190px;
+    padding: 3px;
+}
+
+.bg-light{
+  background-color:transparent!important;
+}
+
+.NavLinks:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.btn-outline-success:hover{
+  color:black!important;
+  border-color::black!important;
+}
+
+.HeadetText{
+    padding: 6px;
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+    min-width: 300px;
+}
+
+.btn-outline-success:hover{
+  background-color: grey!important;
+}
+
+input{
+  width: 200px;
+}
+
+div.NoFavorites{
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 15px;
+  width: 60%;
+  height: 60%;
+  margin: 10%;
+}
+
+div.NoFavoritesText{
+  color: black;
+  font-weight: bold;;
+  font-size: 20px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  margin-top: 20%;
+}
+
+div.ui-widget{
+  min-width: 300px;
+  padding: 3px;
+}
+
+div.CityWeatherTabBody{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.modal-header{
+  cursor: grab;
+}
+
+#tags{
+  width: 200px;
+}
+
+.CityWeatherContainer{
+    width: 80%;
+    height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px;
+}
+
+
+.CityWeatherContainerFav{
+  width: 100%;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+.CityWeatherTab{
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 20px;
+  height: 100%;
+  background-color: var(--color-CityWeatherTab);
+  color: var(--color-CityWeatherTabColor)!important;
+  overflow: auto;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.CityWeatherTabHeader{
+   width: 100%;
+   height: 30%;
+   align-items: center;
+}
+
+.CityWeatherTabTitle{
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  font-size: 22px;
+}
+
+
+.CityWeatherTabDayTab {
+    width: 170px;
+    height: 170px;
+    border: 1px solid black;
+    float: left;
+    margin: 15px;
+    background-color: #7837AD;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+.CityWeatherTabDayTabFav{
+  width: 200px;
+  height: 220px;
+  border: 1px solid black;
+  float: left;
+  margin: 15px;
+  background-color: #7837AD;
+  color: white;
+  font-size: 16px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+div.WeatherImage{
+    height: 60px;
+    width: 80px;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: auto;
+}
+
+div.WeatherImageFav{
+    height: 100px;
+    width: 120px;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: auto;
+}
+
+div.WeatherImageMain{
+    height: 100px;
+    width: 120px;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: auto;
+}
+
+div.Container{
+  position:relative;
+  height:100%;
+  z-index: 10;
+}
+
+div.SearchText{
+  padding:8px;
+  float:left;
+  font-weight: bold;
+}
+
+div.HeaderLeft{
+  width: 90%;
+  min-width: 460px;
+}
+
+div.Temperature {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div.FavDiv{
+   height: 40px;
+   width: 40px;
+   float: right;
+   margin-left: 5px;
+   margin-right: 5px;
+}
+
+div.FavDiv:hover{
+   background-image: url('Favorites2.png');
+   cursor: pointer;
+}
+
+.btn{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+html , body{
+  height: 100%;
+}
+
+html{
+  overflow: hidden;
+}
+
+
+
+div.LoaderBG {
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    z-index: 10;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+div.LoaderBGIneer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    text-align: center;
+    height: 800px;
+    width: 800px;
+    overflow: hidden;
+}
+
+
+img.LoaderGif{
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+div.FavoritesContainer{
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 15px;
+  width: 230px;
+  height: 50px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/******************* Switch ***********************/
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/******************* Switch ***********************/
+
+
+/******************* Modal ***********************/
+
+.modal-open .modal{
+  z-index: 5000;
+}
+.modal-confirm {
+		color: #434e65;
+		width: 525px;
+	}
+	.modal-confirm .modal-content {
+		padding: 20px;
+		font-size: 16px;
+		border-radius: 5px;
+		border: none;
+	}
+	.modal-confirm .modal-header {
+		background: #e85e6c;
+		border-bottom: none;
+        position: relative;
+		text-align: center;
+		margin: -20px -20px 0;
+		border-radius: 5px 5px 0 0;
+		padding: 35px;
+	}
+	.modal-confirm h4 {
+		text-align: center;
+		font-size: 36px;
+		margin: 10px 0;
+	}
+	.modal-confirm .form-control, .modal-confirm .btn {
+		min-height: 40px;
+		border-radius: 3px;
+	}
+	.modal-confirm .close {
+        position: absolute;
+		top: 15px;
+		right: 15px;
+		color: #fff;
+		text-shadow: none;
+		opacity: 0.5;
+	}
+	.modal-confirm .close:hover {
+		opacity: 0.8;
+	}
+	.modal-confirm .icon-box {
+		color: #fff;
+		width: 95px;
+		height: 95px;
+		display: inline-block;
+		border-radius: 50%;
+		z-index: 9;
+		border: 5px solid #fff;
+		padding: 15px;
+		text-align: center;
+	}
+	.modal-confirm .icon-box i {
+		font-size: 58px;
+		margin: -2px 0 0 -2px;
+	}
+	.modal-confirm.modal-dialog {
+		margin-top: 80px;
+	}
+    .modal-confirm .btn {
+        color: #fff;
+        border-radius: 4px;
+		background: #eeb711;
+		text-decoration: none;
+		transition: all 0.4s;
+        line-height: normal;
+		border-radius: 30px;
+		margin-top: 10px;
+		padding: 6px 20px;
+		min-width: 150px;
+        border: none;
+    }
+	.modal-confirm .btn:hover, .modal-confirm .btn:focus {
+		background: #eda645;
+		outline: none;
+	}
+	.trigger-btn {
+		display: inline-block;
+		margin: 100px auto;
+	}
+
+  /******************* Modal ***********************/

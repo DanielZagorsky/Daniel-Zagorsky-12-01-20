@@ -1,10 +1,103 @@
-<html>
- <head>
-  <link rel="stylesheet" href="https://github.com/DanielZagorsky/HeroloWeather/blob/master/Main.css">
- </head>
- <body>
-  
-  <p class="check"> hello world</p>
- 
- </body>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="theme-dark" ng-app="MyApp">
+
+<head>
+  <meta charset="utf-8">
+  <title> Weather App </title>
+
+  <script src="jquery.min.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script src="angular.min.js"></script>
+  <script src="ngGeolocation.js"></script>
+  <script src="angular-ui-router.min.js"></script>
+  <script src="Theme.js"></script>
+  <script src="Unit.js"></script>
+  <script src="Favorites.js"></script>
+  <script src="Main.js"></script>
+
+  <link rel="stylesheet" href="C:\Users\Daniel Zagorsky\Desktop\HeroloWeather\.git\hooks\Bootstrap.min.css">
+  <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="Theme.css">
+  <link rel="stylesheet" href="SideNav.css">
+  <link rel="stylesheet" href="Main.css">
+</head>
+
+  <body ng-app="WeatherApp">
+
+    <div id="buttonsidenav" class="buttonsidenav">
+      <div class="SideNavButton" onclick="toggleNav()"> <a href="#" style="padding:0px;color:white!important;text-decoration:none;font-weight:bold;"> Settings </a></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+
+          <a href="#">
+            Theme
+            <label class="switch">
+              <input style="cursor:pointer;" type="checkbox" onclick="toggleTheme()">
+              <span class="slider round"></span>
+            </label>
+          </a>
+
+          <a href="#">
+            Unit Type
+            <label class="switch">
+              <input style="cursor:pointer;" type="checkbox" ng-click="UnitTypeChange()">
+              <span class="slider round"></span>
+            </label>
+          </a>
+
+    </div>
+
+     <div class="LoaderBG" style="display:none">
+      <div class="LoaderBGIneer">
+        <img src="LoadingGif.gif" class="LoaderGif"/>
+     </div>
+    </div>
+
+
+
+    <!-- Header -->
+    <div class="Header"> <!--shadow-->
+
+       <div class="HeaderLeft">
+         <div><img src="herolo-logo.jpg" class="HeaderImg" onclick="window.location='https://herolo.co.il/';"/></div>
+         <div><img src="accuWeather.png" class="HeaderImg" onclick="window.location='https://www.accuweather.com/';"/></div>
+         <div class="HeadetText">
+           Herolo Weather Task Homepage
+        </div>
+      </div>
+
+      <div class="ui-widget">
+       <div class="SearchText"> City </div>
+       <input id="tags" class="form-control">
+     </div>
+
+
+       <div class="NavMenu">
+         <nav class="navbar navbar-light bg-light">
+           <form class="form-inline">
+             <button class="btn btn-outline-success" type="button" style="border-color:black;" ng-style="{ 'background-color' : (PageName === 'index' ) ? '#7837AD' : 'white' }"><a ng-style="{ 'color' : (PageName === 'index' ) ? 'white' : '' }" class="NavLinks" ui-sref="weather" ui-sref-active="active"> Weather </a></button>
+             <button class="btn btn-outline-success" type="button" style="border-color:black;" ng-style="{ 'background-color' : (PageName === 'favorites' ) ? '#7837AD' : 'white' }"><a ng-style="{ 'color' : (PageName === 'favorites' ) ? 'white' : '' }" class="NavLinks" ui-sref="favorites" ui-sref-active="active"> Favorites </a></button>
+           </form>
+         </nav>
+       </div>
+
+    </div>
+
+
+    <ui-view style="display:block;padding-top:50px;"></ui-view>
+
+
+    <!-- Footer -->
+   <div class="footer">
+     <p> All right reserved to <a href="https://il.linkedin.com/in/daniel-zagorsky-profile">Daniel Zagorsky </a></p>
+   </div>
+
+
+
+  </body>
 </html>

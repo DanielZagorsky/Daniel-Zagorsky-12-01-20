@@ -1,0 +1,25 @@
+
+.theme-light {
+  --color-HeaderBackground: #ddd;
+  --color-FooterBackground: #ddd;
+  --color-Footercolor: black;
+  --color-Headercolor: black;
+  --color-CityWeatherTab: rgba(255,255,255,0.5);
+  --color-CityWeatherTabColor :black;
+  --color-SideNavBackground :#f1f1f1;
+  --color-SideNavcolor :black;
+
+}
+
+.theme-dark {
+  --color-HeaderBackground: black;
+  --color-FooterBackground: black;
+  --color-Footercolor: white;
+  --color-Headercolor: white;
+  --color-CityWeatherTab: rgba(0, 0, 0,0.5);
+  --color-CityWeatherTabColor :white;
+  --color-SideNavBackground :#262626;
+  --color-SideNavcolor :white;
+
+
+}
