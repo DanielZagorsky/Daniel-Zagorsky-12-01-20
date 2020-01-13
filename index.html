@@ -90,8 +90,20 @@
        <div class="NavMenu">
          <nav class="navbar navbar-light bg-light">
            <form class="form-inline">
-             <button class="btn btn-outline-success" type="button" style="border-color:black;" ng-style="{ 'background-color' : (PageName === 'weather' ) ? '#7837AD' : 'white' }"><a ng-style="{ 'color' : (PageName === 'weather' ) ? 'white' : '' }" class="NavLinks"       ng-click="CleanRedirectionData()" ui-sref="weather"> Weather </a></button>
-             <button class="btn btn-outline-success" type="button" style="border-color:black;" ng-style="{ 'background-color' : (PageName === 'favorites' ) ? '#7837AD' : 'white' }"><a ng-style="{ 'color' : (PageName === 'favorites' ) ? 'white' : '' }" class="NavLinks"   ui-sref="favorites"> Favorites </a></button>
+             
+             <a ng-style="{'color':(PageName === 'weather')?'white':''}" class="NavLinks" ng-click="CleanRedirectionData()" ui-sref="weather">
+               <button class="btn btn-outline-success" type="button" style="border-color:black;" ng-style="{'background-color':(PageName === 'weather')?'#7837AD':'white'}">
+                 Weather 
+               </button>
+             </a> 
+             
+             <a ng-style="{'color':(PageName === 'favorites')?'white':''}" class="NavLinks" ui-sref="favorites">
+               <button class="btn btn-outline-success" type="button" style="border-color:black;" ng-style="{'background-color':(PageName === 'favorites')?'#7837AD':'white'}">
+                Favorites 
+               </button>
+             </a>
+           
+           
            </form>
          </nav>
        </div>
