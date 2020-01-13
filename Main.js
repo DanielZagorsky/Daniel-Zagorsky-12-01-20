@@ -273,6 +273,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 
 app.controller("WeatherAppFavoritesController", function($scope , $http , $timeout , $window , $geolocation , $state) {
 
+  $('.LoaderBG').fadeOut();
   $scope.UnitType = setUnit('C');
   $scope.FavoritesArray = [];
 
