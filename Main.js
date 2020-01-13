@@ -280,7 +280,6 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 app.controller("WeatherAppFavoritesController", function($scope , $http , $timeout , $window , $geolocation , $state) {
 
   $('.LoaderBG').fadeOut(1000);
-  $scope.UnitType = setUnit('C');
   $scope.FavoritesArray = [];
 
   for(var i =0; i < localStorage.length; i++){ //Retrieve all Favorites
@@ -302,10 +301,6 @@ app.controller("WeatherAppFavoritesController", function($scope , $http , $timeo
      $scope.$parent.Label = name;
      $state.go('weather');
   }
-
-  $scope.UnitTypeChange = function(){
-     $scope.UnitType = toggleUnit();
-  } 
 
 
 
