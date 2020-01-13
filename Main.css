@@ -335,10 +335,7 @@ div.LoaderBG {
 div.LoaderBGIneer {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
     text-align: center;
-    height: 800px;
-    width: 800px;
     overflow: hidden;
 }
 
