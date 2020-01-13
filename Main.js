@@ -62,6 +62,8 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
     $scope.GetSelectedCityData($scope.CityDataKey);
     $scope.GetCurrentConditions($scope.CityDataKey);
     $scope.IsFavorite($scope.CityDataKey);
+    $scope.$parent.Key = null;   //Clean after redirection
+    $scope.$parent.Label = null;
   }
 
   /*
@@ -250,9 +252,6 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
       $scope.UseRedirectedAsDefault( $scope.$parent.Label , $scope.$parent.Key );
    }else{
       
-      $scope.$parent.Key = null;   //Clean If its not a redirect
-      $scope.$parent.Label = null;
-     
       $geolocation.getCurrentPosition({
       timeout: 500
       }).then(function(position) {
