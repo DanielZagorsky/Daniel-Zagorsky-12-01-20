@@ -343,6 +343,7 @@ function toggleNav() {
 
 function Notification(Title ,Body) {
     var scope = angular.element(document.getElementById('MainWrap')).scope();
+    //document.getElementsByClassName("example");
     scope.PushNotification(Title,Body);
 }
 
