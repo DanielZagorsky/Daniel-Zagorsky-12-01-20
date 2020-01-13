@@ -25,16 +25,26 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   
 })
 
-app.controller("MasterController", function($scope , $http , $timeout , $window , $geolocation , $state , $location) {
+app.controller("MasterController", function($scope , $http , $timeout , $window , $geolocation , $state , $location , $rootScope ) {
+  
+
+  $scope.Key = null;
+  $scope.Label = null;
   
   var LocationPartitions = $window.location.href.split('/');
   $scope.PageName = LocationPartitions[LocationPartitions.length-1];
-  $scope.Key = null;
-  $scope.Label = null;
+  
+  $rootScope.$on('$stateChangeStart', 
+     function(event, toState, toParams, fromState, fromParams){ 
+     alert("444");
+  });
+  
 });
 
 app.controller("WeatherAppController", function($scope , $http , $timeout , $window , $geolocation , $state , $location) {
+   
 
+  
   /**********Default Settings********/
   $scope.UnitType = setUnit('C');
   $scope.FavIcon = "Favorites1.png";
