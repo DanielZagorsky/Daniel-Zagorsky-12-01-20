@@ -293,7 +293,7 @@ app.controller("WeatherAppFavoritesController", function($scope , $http , $timeo
   $scope.Navigate = function(name,key){
      $scope.$parent.Key = key;
      $scope.$parent.Label = name;
-     $state.go(weather);
+     $state.go('weather');
      //$window.location.href = "https://danielzagorsky.github.io/HeroloWeather/";
      //$window.location.href = "index.html" + "?" + name + "?" + key;
   }
