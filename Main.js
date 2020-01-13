@@ -57,7 +57,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
   
   /**********Default Settings********/
   
-
+   alert("weather");
   
   /*
   * Use Default location as Tel Aviv.
@@ -287,7 +287,9 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 });
 
 app.controller("WeatherAppFavoritesController", function($scope , $http , $timeout , $window , $geolocation , $state) {
-
+  
+  alert("fav");
+  
   $('.LoaderBG').fadeOut(1000);
   $scope.FavoritesArray = [];
 
