@@ -21,7 +21,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state(WeatherState);
   $stateProvider.state(FavoritesState);
 
-  $urlRouterProvider.otherwise("/weather");
+  //$urlRouterProvider.otherwise("/weather");
   
 })
 
