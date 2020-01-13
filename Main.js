@@ -36,7 +36,7 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
         $timeout( function(){
           var LocationPartitions = $window.location.href.split('/');
           $scope.PageName = LocationPartitions[LocationPartitions.length-1];
-        }, 500 );
+        }, 100 );
         
   });
   
