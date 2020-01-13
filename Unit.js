@@ -15,8 +15,7 @@ function setUnit(Unit) {
 }
 // function to toggle between F and C
 function toggleUnit() {
-    
-    alert("toggleUnit");
+
     if (localStorage.getItem('Unit') === 'F') {
         localStorage.removeItem('Unit');
         localStorage.setItem('Unit','C');
