@@ -28,7 +28,6 @@
 
 .body {
     display: flex;
-    margin-top: 40px;
     flex-wrap: wrap;
     align-items:center;
     overflow: auto;
