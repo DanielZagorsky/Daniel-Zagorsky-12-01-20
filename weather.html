@@ -53,7 +53,7 @@
 
             <div class="Container" ng-show="UnitType">
               <div style="font-weight:bold;font-size:20px;"> {{d.Date | date:'EEEE'}} </div>
-              <div> {{ (d.Day.IconPhrase).replace('w/', '') }}  -  {{d.Day.Icon}} </div>
+              <div> {{ (d.Day.IconPhrase).replace('w/', '') }}  </div>
               <div class="WeatherImage" back-img="https://developer.accuweather.com/sites/default/files/{{d.Day.Icon}}-s.png"></div>
               <div class="Temperature"> {{d.Temperature.Minimum.Value}} - {{d.Temperature.Maximum.Value}}  ° F </div>
             </div>
