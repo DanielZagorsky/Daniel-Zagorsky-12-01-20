@@ -34,15 +34,8 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
   
   $rootScope.$on('$stateChangeSuccess',   
      function(event, toState, toParams, fromState, fromParams){
-        
-        //alert(toState);
-    
-        //$timeout( function(){
-          //var LocationPartitions = $window.location.href.split('/');
           $scope.PageName = toState.name;
           $('.LoaderBG').show();
-       // }, 200 );
-        
   });
   
 });
@@ -219,7 +212,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
             var Text = $("#tags").val();
 
             if(Text.length>1){
-                var TestForEnglishLetters =  /^[a-zA-Z]+$/.test(Text);
+                var TestForEnglishLetters =  /^[a-zA-Z ]+$/.test(Text);
                 if(!TestForEnglishLetters){ //Not only English letters
                     $scope.PushNotification("Alert","Searching should be done in English letters only");
                 }else{
