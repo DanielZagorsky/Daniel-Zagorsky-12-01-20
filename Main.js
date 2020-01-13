@@ -40,6 +40,7 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
   });
   
   $scope.UnitTypeChange = function(){
+    alert("unit");
       $scope.UnitType = toggleUnit();
   }
   
