@@ -114,7 +114,6 @@ div.NoFavorites{
   border-radius: 15px;
   width: 60%;
   height: 60%;
-  margin: 10%;
 }
 
 div.NoFavoritesText{
@@ -168,6 +167,7 @@ div.CityWeatherTabBody{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 
