@@ -77,11 +77,11 @@
          <div><img src="herolo-logo.jpg" class="HeaderImg" onclick="window.location='https://herolo.co.il/';"/></div>
          <div><img src="accuWeather.png" class="HeaderImg" onclick="window.location='https://www.accuweather.com/';"/></div>
          <div class="HeadetText">
-           Herolo Weather Task {{PageName | uppercase}}
+           Herolo Task : {{PageName | uppercase}}
         </div>
       </div>
 
-      <div class="ui-widget">
+      <div class="ui-widget" ng-show="PageName === 'weather'">
        <div class="SearchText"> City </div>
        <input id="tags" class="form-control">
      </div>
