@@ -30,9 +30,6 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
   $scope.Key = null;
   $scope.Label = null;
   $scope.UnitType = setUnit('C');
-
-  
-  alert("master");
   
   $rootScope.$on('$stateChangeSuccess',   
      function(event, toState, toParams, fromState, fromParams){
@@ -40,9 +37,7 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
           $('.LoaderBG').show();
   });
   
-
   $scope.UnitTypeChange = function(){
-    alert("unit");
       $scope.UnitType = toggleUnit();
   }
   
@@ -51,13 +46,12 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
 
 app.controller("WeatherAppController", function($scope , $http , $timeout , $window , $geolocation , $state , $location) {
   
-  /**********Default Settings********/
+  /*
+  * Default Weather state settings
+  */
   $scope.FavIcon = "Favorites1.png";
   var Cities = [];
-  
-  /**********Default Settings********/
-  
-   alert("weather");
+ 
   
   /*
   * Use Default location as Tel Aviv.
@@ -82,10 +76,12 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
     $scope.CleanRedirectionData();
   }
   
+  /*
+  * Use saved key & label at master controller and destroy after usage
+  */
   $scope.CleanRedirectionData = function(){
     $scope.$parent.Key = null;   //Clean after redirection
     $scope.$parent.Label = null;
-    //$state.go('weather');
   }
 
   /*
@@ -263,7 +259,10 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 
    $(".modal").draggable();
 
-
+  
+  /*
+  *  Redirected from favorites || By Geolocation || By default (Tel Aviv)
+  */
    if($scope.$parent.Key != null){
       $scope.UseRedirectedAsDefault( $scope.$parent.Label , $scope.$parent.Key );
    }else{
@@ -288,8 +287,6 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 
 app.controller("WeatherAppFavoritesController", function($scope , $http , $timeout , $window , $geolocation , $state) {
   
-  alert("fav");
-  
   $('.LoaderBG').fadeOut(1000);
   $scope.FavoritesArray = [];
 
@@ -307,6 +304,9 @@ app.controller("WeatherAppFavoritesController", function($scope , $http , $timeo
      $(".NoFavorites").css("display", "none");
   }
 
+  /*
+  * Save key & label at the master controller to use them after changing state to weather
+  */
   $scope.Navigate = function(name,key){
      $scope.$parent.Key = key;
      $scope.$parent.Label = name;
