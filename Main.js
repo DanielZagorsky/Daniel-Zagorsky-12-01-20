@@ -68,6 +68,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
   $scope.CleanRedirectionData = function(){
     $scope.$parent.Key = null;   //Clean after redirection
     $scope.$parent.Label = null;
+    $state.go('weather');
   }
 
   /*
@@ -298,8 +299,6 @@ app.controller("WeatherAppFavoritesController", function($scope , $http , $timeo
      $scope.$parent.Key = key;
      $scope.$parent.Label = name;
      $state.go('weather');
-     //$window.location.href = "https://danielzagorsky.github.io/HeroloWeather/";
-     //$window.location.href = "index.html" + "?" + name + "?" + key;
   }
 
   $scope.UnitTypeChange = function(){
