@@ -21,7 +21,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state(WeatherState);
   $stateProvider.state(FavoritesState);
 
-  //$urlRouterProvider.otherwise("/Weather");
+  $urlRouterProvider.otherwise("/weather");
+  
+  
 /*
     $stateProvider.state('Weather', {
         //template: '<div id="state1"><p>Slide 1</p><a ui-sref="state2">State 2</a></div>',
