@@ -22,4 +22,5 @@ Responsive design is applied.
 *No mobile view required. Alse search on a mobile will not work due to "Desktop app" on accuWeather.
 *Creating a new "mobile app" on accuWeather is possible, it will require to make a check in the controller for mobile devices and change the provided Key (by accuWeather);
 
+App Url (using GitHub Site Pages) : https://danielzagorsky.github.io/Daniel-Zagorsky-12-01-20/#/weather
 Made by Daniel Zagorsky.
