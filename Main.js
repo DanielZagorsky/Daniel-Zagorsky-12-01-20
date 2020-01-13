@@ -28,7 +28,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 app.controller("MasterController", function($scope , $http , $timeout , $window , $geolocation , $state , $location) {
   
   var LocationPartitions = $window.location.href.split('/');
-  $scope.PageName = LocationPartitions[LocationPartitions.length-1].split('.')[0];
+  $scope.PageName = LocationPartitions[LocationPartitions.length-1];
   $scope.Key = null;
   $scope.Label = null;
 });
