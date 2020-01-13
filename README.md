@@ -3,6 +3,8 @@
 The app contains 2 pages , weather and favorites.
 The resources are being loaded at the index.html , page flow is controlled by state management.
 
+By default , if user allows the browser to access his location than the closest city to him will be shown. Otherwise, Tel Aviv.
+
 On the weather page :
 1) Autocomplete api call occurs on a key press to update the jquery autocomplete source.
 2) 2 other api calls occur when a city is selected to receive the full data , and forecast for the next 5 days.
