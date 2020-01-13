@@ -293,7 +293,7 @@ app.controller("WeatherAppFavoritesController", function($scope , $http , $timeo
 
   $scope.UnitTypeChange = function(){
      $scope.UnitType = toggleUnit();
-  }
+  } 
 
 
 
