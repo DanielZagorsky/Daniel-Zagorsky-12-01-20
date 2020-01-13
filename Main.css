@@ -81,7 +81,8 @@ img.HeaderImg {
 
 .btn-outline-success:hover{
   color:black!important;
-  border-color::black!important;
+  border-color:black!important;
+
 }
 
 .HeadetText{
