@@ -29,8 +29,7 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
   
   $scope.Key = null;
   $scope.Label = null;
-  
-  //$stateChangeStart
+  $scope.UnitType = setUnit('C');
   
   $rootScope.$on('$stateChangeSuccess',   
      function(event, toState, toParams, fromState, fromParams){
@@ -38,17 +37,17 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
           $('.LoaderBG').show();
   });
   
+  $scope.UnitTypeChange = function(){
+      $scope.UnitType = toggleUnit();
+  }
+  
 });
 
 app.controller("WeatherAppController", function($scope , $http , $timeout , $window , $geolocation , $state , $location) {
-   
-
   
   /**********Default Settings********/
-  $scope.UnitType = setUnit('C');
   $scope.FavIcon = "Favorites1.png";
   var Cities = [];
-  var RedirectPartitions = ($window.location.href).split('@');
   /**********Default Settings********/
 
   /*
@@ -237,12 +236,6 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
         $scope.FavIcon = "Favorites1.png";
       }
    }
-
-
-   $scope.UnitTypeChange = function(){
-      $scope.UnitType = toggleUnit();
-   }
-
 
    $scope.AddToFavorites = function(){ // Tel Aviv or Geolocation or By Select
         setFavorite($scope.CurrentCityName,$scope.CityDataKey,$scope.CurrentCityConditions);
