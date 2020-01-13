@@ -38,7 +38,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
   $scope.UnitType = setUnit('C');
   $scope.FavIcon = "Favorites1.png";
   var Cities = [];
-  var RedirectPartitions = (decodeURI($window.location.href)).split('?');
+  var RedirectPartitions = ($window.location.href).split('@');
   /**********Default Settings********/
 
   /*
@@ -287,7 +287,7 @@ app.controller("WeatherAppFavoritesController", function($scope , $http , $timeo
   }
 
   $scope.Navigate = function(name,key){
-       $window.location.href = "https://danielzagorsky.github.io/HeroloWeather/#/weather" + "?" + name + "?" + key;
+       $window.location.href = "https://danielzagorsky.github.io/HeroloWeather/#/weather" + "@" + name + "@" + key;
      //$window.location.href = "index.html" + "?" + name + "?" + key;
   }
 
