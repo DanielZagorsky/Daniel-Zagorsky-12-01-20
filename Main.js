@@ -31,11 +31,13 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
   $scope.Label = null;
   //$stateChangeStart
   $rootScope.$on('$stateChangeSuccess',   
-     function(event, toState, toParams, fromState, fromParams){ 
-     
-        var LocationPartitions = $window.location.href.split('/');
-        $scope.PageName = LocationPartitions[LocationPartitions.length-1];
+     function(event, toState, toParams, fromState, fromParams){
     
+        $timeout( function(){
+          var LocationPartitions = $window.location.href.split('/');
+          $scope.PageName = LocationPartitions[LocationPartitions.length-1];
+        }, 500 );
+        
   });
   
 });
