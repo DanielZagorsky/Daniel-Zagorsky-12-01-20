@@ -62,6 +62,10 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
     $scope.GetSelectedCityData($scope.CityDataKey);
     $scope.GetCurrentConditions($scope.CityDataKey);
     $scope.IsFavorite($scope.CityDataKey);
+    $scope.CleanRedirectionData();
+  }
+  
+  $scope.CleanRedirectionData = function(){
     $scope.$parent.Key = null;   //Clean after redirection
     $scope.$parent.Label = null;
   }
