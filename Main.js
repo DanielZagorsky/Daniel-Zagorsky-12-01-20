@@ -29,16 +29,18 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
   
   $scope.Key = null;
   $scope.Label = null;
+  
   //$stateChangeStart
+  
   $rootScope.$on('$stateChangeSuccess',   
      function(event, toState, toParams, fromState, fromParams){
         
-    alert(toState);
+        //alert(toState);
     
-        $timeout( function(){
-          var LocationPartitions = $window.location.href.split('/');
-          $scope.PageName = LocationPartitions[LocationPartitions.length-1];
-        }, 100 );
+        //$timeout( function(){
+          //var LocationPartitions = $window.location.href.split('/');
+          $scope.PageName = toState.name;
+       // }, 200 );
         
   });
   
