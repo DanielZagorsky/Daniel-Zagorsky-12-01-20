@@ -40,10 +40,7 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
           $('.LoaderBG').show();
   });
   
-   $scope.UnitTypeChange = function(){
-    alert("unit");
-      $scope.UnitType = toggleUnit();
-  }
+
   
   
 });
@@ -56,7 +53,10 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
   
   /**********Default Settings********/
   
-
+  $scope.UnitTypeChange = function(){
+    alert("unit");
+      $scope.UnitType = toggleUnit();
+  }
   
   /*
   * Use Default location as Tel Aviv.
