@@ -1,0 +1,76 @@
+<!-- Modal -->
+    <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle"> {{Modaltitle}} </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            {{ModalBody}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="CityWeatherContainer">
+      <div class="CityWeatherTab ng-cloak">
+
+
+         <div class="CityWeatherTabHeader">
+
+
+              <div style="font-size:20px;font-weight:bold;float:left;">
+               <div class="WeatherImage" back-img="https://developer.accuweather.com/sites/default/files/{{CurrentCityConditions.WeatherIcon}}-s.png"></div>
+               {{CurrentCityName}}
+               <span ng-show="UnitType">  {{CurrentCityConditions.Temperature.Imperial.Value}} ° {{CurrentCityConditions.Temperature.Imperial.Unit}} </span>
+               <span ng-show="!UnitType"> {{CurrentCityConditions.Temperature.Metric.Value}} ° {{CurrentCityConditions.Temperature. Metric.Unit}} </span>
+              </div>
+
+
+               <div class="FavoritesContainer" style="float:right;">
+                 Add/Remove Favorites
+                  <div class="FavDiv" back-img="{{FavIcon}}" ng-Click="AddToFavorites()"></div>
+               </div>
+
+
+         </div>
+
+
+      <div class="CityWeatherTabTitle ng-cloak">
+          <div style="font-weight:bold;font-size:34px;"> {{CurrentCityConditions.WeatherText}} </div>
+          <!--<div>  {{CurrentCityData.Headline.Text}} </div>
+          <div>   Severity level : {{CurrentCityData.Headline.Severity}} </div>-->
+      </div>
+
+
+        <div class="CityWeatherTabBody">
+
+          <div ng-repeat="d in CurrentCityData.DailyForecasts" class="CityWeatherTabDayTab">
+
+            <div class="Container" ng-show="UnitType">
+              <div style="font-weight:bold;font-size:20px;"> {{d.Date | date:'EEEE'}} </div>
+              <div> {{ (d.Day.IconPhrase).replace('w/', '') }}  -  {{d.Day.Icon}} </div>
+              <div class="WeatherImage" back-img="https://developer.accuweather.com/sites/default/files/{{d.Day.Icon}}-s.png"></div>
+              <div class="Temperature"> {{d.Temperature.Minimum.Value}} - {{d.Temperature.Maximum.Value}}  ° F </div>
+            </div>
+
+            <div class="Container" ng-show="!UnitType">
+              <div style="font-weight:bold;font-size:20px;"> {{d.Date | date:'EEEE'}} </div>
+              <div> {{ (d.Day.IconPhrase).replace('w/', '') }}  </div>
+              <div class="WeatherImage" back-img="https://developer.accuweather.com/sites/default/files/{{d.Day.Icon}}-s.png"></div>
+              <div class="Temperature"> {{ (5/9) * (d.Temperature.Minimum.Value-32) | Round  }} - {{ (5/9) * (d.Temperature.Maximum.Value -32) | Round }}  ° C </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+    </div>
