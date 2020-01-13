@@ -7,7 +7,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   var WeatherState = {
     name: "weather",
     url: "/weather",
-    templateUrl: 'weather.html',
+    templateUrl: 'test.html',
     controller: "WeatherAppController"
   }
 
