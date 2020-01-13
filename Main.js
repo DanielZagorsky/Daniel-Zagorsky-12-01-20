@@ -29,8 +29,8 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
   
   $scope.Key = null;
   $scope.Label = null;
-  
-  $rootScope.$on('$stateChangeStart', 
+  //$stateChangeStart
+  $rootScope.$on('$stateChangeSuccess',   
      function(event, toState, toParams, fromState, fromParams){ 
      
         var LocationPartitions = $window.location.href.split('/');
