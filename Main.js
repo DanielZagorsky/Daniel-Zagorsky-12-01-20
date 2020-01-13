@@ -79,7 +79,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 
     $http({
     method: 'GET',
-    url: 'http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=A0p5TuY2E3ABtGcLIfWkWTYOGJo7NfcQ&q=' + Longtitude + '%2C'  + Latitude +'&language=en-Us&details=true&toplevel=true'
+    url: 'https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=A0p5TuY2E3ABtGcLIfWkWTYOGJo7NfcQ&q=' + Longtitude + '%2C'  + Latitude +'&language=en-Us&details=true&toplevel=true'
     }).then(function successCallback(response) {
 
       $scope.DefaultCityData = response.data;
