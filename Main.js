@@ -102,7 +102,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 
     $http({
     method: 'GET',
-    url: 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=A0p5TuY2E3ABtGcLIfWkWTYOGJo7NfcQ&q=' + InputString + '&language=en-Us'
+    url: 'https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=A0p5TuY2E3ABtGcLIfWkWTYOGJo7NfcQ&q=' + InputString + '&language=en-Us'
     }).then(function successCallback(response) {
 
       var results = response.data;
@@ -136,7 +136,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 
     $http({
     method: 'GET',
-    url: 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/'+ SelectedCityKey +'?apikey=A0p5TuY2E3ABtGcLIfWkWTYOGJo7NfcQ&language=en-Us&details=tru'
+    url: 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'+ SelectedCityKey +'?apikey=A0p5TuY2E3ABtGcLIfWkWTYOGJo7NfcQ&language=en-Us&details=tru'
     }).then(function successCallback(response) {
 
       for (i = 0; i < response.data.DailyForecasts.length; i++) { //Fix numbers to use them for retrieving weather icons from accuweather
@@ -161,7 +161,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 
     $http({
     method: 'GET',
-    url: 'http://dataservice.accuweather.com/currentconditions/v1/' + SelectedCityKey + '?apikey=A0p5TuY2E3ABtGcLIfWkWTYOGJo7NfcQ&language=en-Us&details=true'
+    url: 'https://dataservice.accuweather.com/currentconditions/v1/' + SelectedCityKey + '?apikey=A0p5TuY2E3ABtGcLIfWkWTYOGJo7NfcQ&language=en-Us&details=true'
     }).then(function successCallback(response) {
 
       var num = response.data[0].WeatherIcon;  //Fix numbers to use them for retrieving weather icons from accuweather
