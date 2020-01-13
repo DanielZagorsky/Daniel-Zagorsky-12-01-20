@@ -40,6 +40,7 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
         //$timeout( function(){
           //var LocationPartitions = $window.location.href.split('/');
           $scope.PageName = toState.name;
+          $('.LoaderBG').show();
        // }, 200 );
         
   });
@@ -292,7 +293,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 
 app.controller("WeatherAppFavoritesController", function($scope , $http , $timeout , $window , $geolocation , $state) {
 
-  $('.LoaderBG').fadeOut();
+  $('.LoaderBG').fadeOut(1000);
   $scope.UnitType = setUnit('C');
   $scope.FavoritesArray = [];
 
