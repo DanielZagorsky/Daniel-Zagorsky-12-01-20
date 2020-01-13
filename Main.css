@@ -177,7 +177,8 @@ div.CityWeatherTabBody{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
+ }	
+	
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
