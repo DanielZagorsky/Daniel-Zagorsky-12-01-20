@@ -38,7 +38,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
   $scope.UnitType = setUnit('C');
   $scope.FavIcon = "Favorites1.png";
   var Cities = [];
-  var RedirectPartitions = $window.location.href.split('?');
+  var RedirectPartitions = (decodeURI($window.location.href)).split('?');
   /**********Default Settings********/
 
   /*
