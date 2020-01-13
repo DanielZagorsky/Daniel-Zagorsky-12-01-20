@@ -303,7 +303,6 @@ div.FavDiv{
 }
 
 div.FavDiv:hover{
-   background-image: url('Favorites2.png');
    cursor: pointer;
 }
 
