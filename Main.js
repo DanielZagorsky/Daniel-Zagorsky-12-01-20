@@ -23,29 +23,18 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise("/weather");
   
-  
-/*
-    $stateProvider.state('Weather', {
-        //template: '<div id="state1"><p>Slide 1</p><a ui-sref="state2">State 2</a></div>',
-        url: '/index.html',
-        controller: "WeatherAppController"
-    });
-
-    $stateProvider.state('Favorites', {
-        //template: '<div id="state2"><p>Slide 2</p><a ui-sref="state1">State 1</a></div>',
-        url: '/favorites.html',
-        controller: "WeatherAppFavoritesController"
-    });
-
-    // For any unmatched url, redirect to /state1
-    //$urlRouterProvider.otherwise("/state1");*/
 })
+
+app.controller("MasterController", function($scope , $http , $timeout , $window , $geolocation , $state , $location) {
+  
+  var LocationPartitions = $window.location.href.split('/');
+  $scope.PageName = LocationPartitions[LocationPartitions.length-1].split('.')[0];
+  
+});
 
 app.controller("WeatherAppController", function($scope , $http , $timeout , $window , $geolocation , $state , $location) {
 
   /**********Default Settings********/
-  var LocationPartitions = $window.location.href.split('/');
-  $scope.PageName = LocationPartitions[LocationPartitions.length-1];
   $scope.UnitType = setUnit('C');
   $scope.FavIcon = "Favorites1.png";
   var Cities = [];
@@ -280,8 +269,6 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 
 app.controller("WeatherAppFavoritesController", function($scope , $http , $timeout , $window , $geolocation , $state) {
 
-  var LocationPartitions = $window.location.href.split('/');
-  $scope.PageName = LocationPartitions[LocationPartitions.length-1];
   $scope.UnitType = setUnit('C');
   $scope.FavoritesArray = [];
 
