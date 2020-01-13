@@ -342,8 +342,8 @@ function toggleNav() {
 
 
 function Notification(Title ,Body) {
-    var scope = angular.element(document.getElementById('MainWrap')).scope();
-    //document.getElementsByClassName("example");
+    //var scope = angular.element(document.getElementById('MainWrap')).scope();
+    var scope = angular.element(document.getElementsByClassName('CityWeatherContainer')).scope();
     scope.PushNotification(Title,Body);
 }
 
