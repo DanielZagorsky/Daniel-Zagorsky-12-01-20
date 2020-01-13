@@ -343,7 +343,7 @@ function toggleNav() {
 
 function Notification(Title ,Body) {
     var scope = angular.element(document.getElementById('MainWrap')).scope();
-    /*scope.PushNotification(Title,Body);*/
+    scope.PushNotification(Title,Body);
 }
 
 function addZero(number){
