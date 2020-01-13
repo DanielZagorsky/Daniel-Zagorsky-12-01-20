@@ -45,7 +45,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 
   /**********Default Settings********/
   var LocationPartitions = $window.location.href.split('/');
-  $scope.PageName = LocationPartitions[LocationPartitions.length-1].split('.')[0];
+  $scope.PageName = LocationPartitions[LocationPartitions.length-1];
   $scope.UnitType = setUnit('C');
   $scope.FavIcon = "Favorites1.png";
   var Cities = [];
@@ -281,7 +281,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
 app.controller("WeatherAppFavoritesController", function($scope , $http , $timeout , $window , $geolocation , $state) {
 
   var LocationPartitions = $window.location.href.split('/');
-  $scope.PageName = LocationPartitions[LocationPartitions.length-1].split('.')[0];
+  $scope.PageName = LocationPartitions[LocationPartitions.length-1];
   $scope.UnitType = setUnit('C');
   $scope.FavoritesArray = [];
 
@@ -300,7 +300,8 @@ app.controller("WeatherAppFavoritesController", function($scope , $http , $timeo
   }
 
   $scope.Navigate = function(name,key){
-     $window.location.href = "index.html" + "?" + name + "?" + key;
+       $window.location.href = "https://danielzagorsky.github.io/HeroloWeather/#/weather" + "?" + name + "?" + key;
+     //$window.location.href = "index.html" + "?" + name + "?" + key;
   }
 
   $scope.UnitTypeChange = function(){
