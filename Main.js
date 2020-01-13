@@ -30,6 +30,7 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
   $scope.Key = null;
   $scope.Label = null;
   $scope.UnitType = setUnit('C');
+
   
   alert("master");
   
@@ -39,10 +40,11 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
           $('.LoaderBG').show();
   });
   
-  $scope.UnitTypeChange = function(){
+   $scope.UnitTypeChange = function(){
     alert("unit");
       $scope.UnitType = toggleUnit();
   }
+  
   
 });
 
@@ -51,8 +53,11 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
   /**********Default Settings********/
   $scope.FavIcon = "Favorites1.png";
   var Cities = [];
+  
   /**********Default Settings********/
+  
 
+  
   /*
   * Use Default location as Tel Aviv.
   */
@@ -79,7 +84,7 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
   $scope.CleanRedirectionData = function(){
     $scope.$parent.Key = null;   //Clean after redirection
     $scope.$parent.Label = null;
-    $state.go('weather');
+    //$state.go('weather');
   }
 
   /*
@@ -326,7 +331,6 @@ function toggleNav() {
 
 
 function Notification(Title ,Body) {
-    //var scope = angular.element(document.getElementById('MainWrap')).scope();
     var scope = angular.element(document.getElementsByClassName('CityWeatherContainer')).scope();
     scope.PushNotification(Title,Body);
 }
