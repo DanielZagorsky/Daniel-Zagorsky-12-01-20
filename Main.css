@@ -59,6 +59,10 @@ img.HeaderImg {
   color: black;
 }
 
+.NavLinks:hover{
+  cursor:pointer:
+}
+
 .navbar{
   padding:0px!important;
 }
