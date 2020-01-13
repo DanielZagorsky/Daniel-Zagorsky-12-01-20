@@ -31,6 +31,8 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
   $scope.Label = null;
   $scope.UnitType = setUnit('C');
   
+  alert("master");
+  
   $rootScope.$on('$stateChangeSuccess',   
      function(event, toState, toParams, fromState, fromParams){
           $scope.PageName = toState.name;
