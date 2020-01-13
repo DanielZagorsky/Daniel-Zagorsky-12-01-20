@@ -29,7 +29,8 @@ app.controller("MasterController", function($scope , $http , $timeout , $window 
   
   var LocationPartitions = $window.location.href.split('/');
   $scope.PageName = LocationPartitions[LocationPartitions.length-1].split('.')[0];
-  
+  $scope.Key = null;
+  $scope.Label = null;
 });
 
 app.controller("WeatherAppController", function($scope , $http , $timeout , $window , $geolocation , $state , $location) {
@@ -245,10 +246,13 @@ app.controller("WeatherAppController", function($scope , $http , $timeout , $win
    $(".modal").draggable();
 
 
-   if(RedirectPartitions.length > 1){
-      $scope.UseRedirectedAsDefault( decodeURI(RedirectPartitions[1]) , decodeURI(RedirectPartitions[2]) );
+   if($scope.$parent.Key != null){
+      $scope.UseRedirectedAsDefault( $scope.$parent.Label , $scope.$parent.Key );
    }else{
-
+      
+      $scope.$parent.Key = null;   //Clean If its not a redirect
+      $scope.$parent.Label = null;
+     
       $geolocation.getCurrentPosition({
       timeout: 500
       }).then(function(position) {
@@ -287,7 +291,9 @@ app.controller("WeatherAppFavoritesController", function($scope , $http , $timeo
   }
 
   $scope.Navigate = function(name,key){
-       $window.location.href = "https://danielzagorsky.github.io/HeroloWeather/#/weather" + "@" + name + "@" + key;
+     $scope.$parent.Key = key;
+     $scope.$parent.Label = name;
+     //$window.location.href = "https://danielzagorsky.github.io/HeroloWeather/#/weather" + "@" + name + "@" + key;
      //$window.location.href = "index.html" + "?" + name + "?" + key;
   }
 
