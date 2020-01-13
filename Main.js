@@ -14,7 +14,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   var FavoritesState = {
     name: 'favorites',
     url: '/favorites',
-    template: '<h2> hello </h2>',
+    templateUrl: 'favorites.html',
     controller: "WeatherAppFavoritesController"
   }
 
